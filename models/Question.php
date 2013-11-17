@@ -1,7 +1,9 @@
 <?php
 class Question extends \Coxis\Core\Model {
 	public static $properties = array(
-		'question',
+		'question' => array(
+			'required'=>true
+		),
 		'answer',
 	);
 	
