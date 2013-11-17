@@ -2,7 +2,7 @@
 /**
 @Prefix('admin/faq')
 */
-class QuestionAdminController extends \App\Admin\Libs\Controller\ModelAdminController {
+class QuestionAdminController extends \Coxis\Admin\Libs\Controller\ModelAdminController {
 	static $_model = 'question';
 	static $_models = 'questions';
 
