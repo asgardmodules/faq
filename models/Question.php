@@ -1,4 +1,6 @@
 <?php
+namespace Coxis\Faq\Models;
+
 class Question extends \Coxis\Core\Model {
 	public static $properties = array(
 		'question' => array(

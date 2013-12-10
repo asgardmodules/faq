@@ -3,7 +3,7 @@
 @Prefix('admin/faq')
 */
 class QuestionAdminController extends \Coxis\Admin\Libs\Controller\ModelAdminController {
-	static $_model = 'question';
+	static $_model = 'Coxis\Faq\Models\Question';
 	static $_models = 'questions';
 
 	function __construct() {
