@@ -2,7 +2,7 @@
 				<div class="block_head">
 					<div class="bheadl"></div>
 					<div class="bheadr"></div>
-					<h2><a href="<?php echo $this->url_for('index') ?>"><?php echo ucfirst(static::$_models) ?></a></h2>
+					<h2><a href="<?php echo $this->url_for('index') ?>"><?php echo ucfirst(static::$_entities) ?></a></h2>
 					<ul>
 						<li><a href="<?php echo $this->url_for('new') ?>"><?php echo __('Add') ?></a></li>
 					</ul>
@@ -19,14 +19,6 @@
 				</div>	
 				
 				<div class="block_content">
-				<!-- 	<div class="block small left" style="width:100%">
-						<div class="block_head">
-							<div class="bheadl"></div>
-							<div class="bheadr"></div>
-							<h2>Liste</h2>	
-						</div>	
-						<div class="block_content"> -->
-						
 							<?php \Coxis\Core\Flash::showAll() ?>
 						
 							<?php if(sizeof($questions) == 0): ?>
@@ -51,7 +43,7 @@
 												<td><?php echo $question->created_at ?></td>
 												<td><a href="<?php echo $this->url_for('edit', array('id'=>$question->id)) ?>"><?php echo $question ?></a></td>
 												<td class="actions">
-													<?php \Hook::trigger('coxis_question_actions', $question, null, true) ?>
+													<?php $question::getDefinition()->trigger('coxis_actions', $question, null, true) ?>
 													<a class="delete" href="<?php echo $this->url_for('delete', array('id'=>$question->id)) ?>"><?php echo __('Delete') ?></a>
 												</td>
 											</tr>
@@ -78,25 +70,6 @@
 							</form>
 							<?php endif ?>
 						</div>		<!-- .block_content ends -->
-						<!-- <div class="bendl"></div>
-						<div class="bendr"></div>
-					</div> -->
-					<!--<div class="block small right" style="width:19%">
-						<div class="block_head">
-							<div class="bheadl"></div>
-							<div class="bheadr"></div>
-							
-							<h2>Filtres</h2>
-						</div>	
-						<div class="block_content">
-							<?php
-							?>
-							
-						</div>		
-						
-						<div class="bendl"></div>
-						<div class="bendr"></div>
-					</div>-->
 				<div class="bendl"></div>
 				<div class="bendr"></div>
 			</div>		

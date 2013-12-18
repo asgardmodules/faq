@@ -1,7 +1,7 @@
 <?php
-namespace Coxis\Faq\Models;
+namespace Coxis\Faq\Entities;
 
-class Question extends \Coxis\Core\Model {
+class Question extends \Coxis\Core\Entity {
 	public static $properties = array(
 		'question' => array(
 			'required'=>true
@@ -13,7 +13,7 @@ class Question extends \Coxis\Core\Model {
 	);
 	
 	public static $behaviors = array(
-		'sortable',
+		'Coxis\Behaviors\SortableBehavior',
 	);
 		
 	public static $meta = array(
