@@ -1,7 +1,7 @@
 <?php
-namespace Coxis\Faq\Entities;
+namespace Asgard\Faq\Entities;
 
-class Question extends \Coxis\Core\Entity {
+class Question extends \Asgard\Core\Entity {
 	public static $properties = array(
 		'question' => array(
 			'required'=>true
@@ -13,7 +13,7 @@ class Question extends \Coxis\Core\Entity {
 	);
 	
 	public static $behaviors = array(
-		'Coxis\Behaviors\SortableBehavior',
+		'Asgard\Behaviors\SortableBehavior',
 	);
 		
 	public static $meta = array(

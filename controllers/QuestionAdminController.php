@@ -2,8 +2,8 @@
 /**
 @Prefix('admin/faq')
 */
-class QuestionAdminController extends \Coxis\Admin\Libs\Controller\EntityAdminController {
-	static $_entity = 'Coxis\Faq\Entities\Question';
+class QuestionAdminController extends \Asgard\Admin\Libs\Controller\EntityAdminController {
+	static $_entity = 'Asgard\Faq\Entities\Question';
 	static $_entities = 'questions';
 
 	function __construct() {
@@ -18,7 +18,7 @@ class QuestionAdminController extends \Coxis\Admin\Libs\Controller\EntityAdminCo
 	}
 	
 	public function formConfigure($entity) {
-		$form = new \Coxis\Admin\Libs\Form\AdminEntityForm($entity, $this);
+		$form = new \Asgard\Admin\Libs\Form\AdminEntityForm($entity, $this);
 		
 		return $form;
 	}

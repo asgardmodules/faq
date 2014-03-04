@@ -19,7 +19,7 @@
 				</div>	
 				
 				<div class="block_content">
-							<?php \Coxis\Core\Coxis\Core\App::get('flash')->showAll() ?>
+							<?php \Asgard\Core\Asgard\Core\App::get('flash')->showAll() ?>
 						
 							<?php if(sizeof($questions) == 0): ?>
 							<div style="text-align:center; font-weight:bold"><?php echo __('No element') ?></div>
@@ -43,7 +43,7 @@
 												<td><?php echo $question->created_at ?></td>
 												<td><a href="<?php echo $this->url_for('edit', array('id'=>$question->id)) ?>"><?php echo $question ?></a></td>
 												<td class="actions">
-													<?php $question::getDefinition()->trigger('coxis_actions', $question, null, true) ?>
+													<?php $question::getDefinition()->trigger('asgard_actions', $question, null, true) ?>
 													<a class="delete" href="<?php echo $this->url_for('delete', array('id'=>$question->id)) ?>"><?php echo __('Delete') ?></a>
 												</td>
 											</tr>
