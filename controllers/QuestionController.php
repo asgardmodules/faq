@@ -2,7 +2,7 @@
 /**
 @Prefix('faq')
 */
-class QuestionController extends Controller {
+class QuestionController extends \Coxis\Core\Controller {
 	/**
 	@Route('')
 	*/

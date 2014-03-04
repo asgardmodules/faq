@@ -19,7 +19,7 @@
 				</div>	
 				
 				<div class="block_content">
-							<?php \Coxis\Core\Flash::showAll() ?>
+							<?php \Coxis\Core\Coxis\Core\App::get('flash')->showAll() ?>
 						
 							<?php if(sizeof($questions) == 0): ?>
 							<div style="text-align:center; font-weight:bold"><?php echo __('No element') ?></div>
