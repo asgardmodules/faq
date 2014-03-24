@@ -1,4 +1,6 @@
 <?php
+namespace Asgard\Faq\Controllers;
+
 /**
 @Prefix('admin/faq')
 */
