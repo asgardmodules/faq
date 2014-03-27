@@ -8,7 +8,7 @@ class QuestionAdminController extends \Asgard\Admin\Libs\Controller\EntityAdminC
 	static $_entity = 'Asgard\Faq\Entities\Question';
 	static $_entities = 'questions';
 
-	function __construct() {
+	public function __construct() {
 		$this->_messages = array(
 			'modified'			=>	__('Question modified with success.'),
 			'created'			=>	__('Question created with success.'),
