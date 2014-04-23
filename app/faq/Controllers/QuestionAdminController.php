@@ -4,7 +4,7 @@ namespace Asgard\Faq\Controllers;
 /**
 @Prefix('admin/faq')
 */
-class QuestionAdminController extends \Asgard\Admin\Libs\Controller\EntityAdminController {
+class QuestionAdminController extends \App\Admin\Libs\Controller\EntityAdminController {
 	static $_entity = 'Asgard\Faq\Entities\Question';
 	static $_entities = 'questions';
 
@@ -20,7 +20,7 @@ class QuestionAdminController extends \Asgard\Admin\Libs\Controller\EntityAdminC
 	}
 	
 	public function formConfigure($entity) {
-		$form = new \Asgard\Admin\Libs\Form\AdminEntityForm($entity, $this);
+		$form = new \App\Admin\Libs\Form\AdminEntityForm($entity, $this);
 		
 		return $form;
 	}
