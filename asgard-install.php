@@ -7,5 +7,5 @@ require_once _VENDOR_DIR_.'autoload.php'; #composer autoloader
 \Asgard\Utils\FileManager::copy(__DIR__.'/tests/QuestionAdmintest.php', _DIR_.'tests/QuestionAdmintest.php');
 \Asgard\Utils\FileManager::copy(__DIR__.'/web/faq', _DIR_.'web/faq');
 
-\Asgard\Orm\Libs\Libs\MigrationsManager::addMigrationFile(__DIR__.'/migrations/Faq.php');
-\Asgard\Orm\Libs\Libs\MigrationsManager::migrate('Faq');
+\Asgard\Orm\Libs\MigrationsManager::addMigrationFile(__DIR__.'/migrations/Faq.php');
+\Asgard\Orm\Libs\MigrationsManager::migrate('Faq');
