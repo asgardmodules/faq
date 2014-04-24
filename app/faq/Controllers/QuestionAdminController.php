@@ -5,8 +5,8 @@ namespace Asgard\Faq\Controllers;
 @Prefix('admin/faq')
 */
 class QuestionAdminController extends \App\Admin\Libs\Controller\EntityAdminController {
-	static $_entity = 'Asgard\Faq\Entities\Question';
-	static $_entities = 'questions';
+	protected $_entity = 'Asgard\Faq\Entities\Question';
+	protected $_entities = 'questions';
 
 	public function __construct() {
 		$this->_messages = array(

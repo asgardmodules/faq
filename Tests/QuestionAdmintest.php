@@ -1,20 +1,10 @@
 <?php
-if(!defined('_ENV_'))
-	define('_ENV_', 'test');
-require_once(__dir__.'/../../../asgard.php');
-Asgard::load();
+namespace Tests;
 
-class QuestionAdminTest extends PHPUnit_Framework_TestCase {
-	public function setUp(){
-		\Schema::dropAll();
-		MigrationsManager::autobuild();
-		\BundlesManager::loadEntityFixturesAll();
-	}
-	public function tearDown(){}
-
+class QuestionAdminTest extends \PHPUnit_Framework_TestCase {
 	public function test1() {
-		$browser = new Browser;
-		$browser->session['admin_id'] = 1;
+		$browser = new \Asgard\Utils\Browser;
+		$browser->setSession('admin_id', 1);
 
 		$browser->get('admin/questions/1/edit');
 		if($browser->last->getCode() == 404)
